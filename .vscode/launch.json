@@ -14,7 +14,7 @@
             "servertype": "stlink",
             "preLaunchTask": "build",
             "configFiles": [
-                "openocd.cfg"
+                "openocd-stlink.cfg"
             ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [

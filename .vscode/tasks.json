@@ -13,7 +13,7 @@
             "detail": "Generated task for compiling",
             "options": {
                 "env": {
-                    "PATH": "/home/asia/Downloads/arm-gcc/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:${env:PATH}"  // 添加工具链路径到系统 PATH
+                    "PATH": "/home/asia/Downloads/arm-gcc/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi/bin:${env:PATH}"  
                 }
             },
         }
