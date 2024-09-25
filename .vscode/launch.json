@@ -11,10 +11,10 @@
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
-            "servertype": "openocd",
+            "servertype": "stlink",
             "preLaunchTask": "build",
             "configFiles": [
-                "openocd-dap.cfg"
+                "openocd.cfg"
             ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [
