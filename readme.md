@@ -15,6 +15,6 @@ Every time configure changed by user in stm32cubeMX, makefile will be regenerate
 dependencies:  
 - openocd: sudo pacman -S openocd
 - arm-gnu-toolchain: download from arm web site
-- cortext-debug: vscode plugin
+- cortext-debug: vscode marketplace
 - stm32cubeMX: download from st web site 
 - vscode
