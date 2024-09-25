@@ -29,7 +29,7 @@
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
-            "servertype": "stlink",
+            "servertype": "openocd",
             "preLaunchTask": "build",
             "configFiles": [
                 "openocd-dap.cfg"
