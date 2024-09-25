@@ -8,4 +8,4 @@ Than add these key files below to debug in vscode:
 - .vscode/task.json // auto compiling before debugging
 - .vscode/settings.json // telling the path of arm tool chain to cortex-debug plugin for finding gdb bin 
   
-one thing should be noticed is that the optimizition of gcc compiling in makefile should be -O0 when debuging needed.
+Every time configure changed by user in stm32cubeMX, makefile will be regenerated. One thing should be noticed is that the optimizition of gcc compiling in makefile should be -O0 when debuging needed. 
