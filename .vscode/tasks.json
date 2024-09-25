@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for compiling",
+            "options": {
+                "env": {
+                    "PATH": "/Applications/ArmGNUToolchain/13.3.rel1/arm-none-eabi/bin:${env:PATH}"  // 添加工具链路径到系统 PATH
+                }
+            },
+        }
+    ]
+}
