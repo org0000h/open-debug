@@ -7,5 +7,14 @@ Than add these key files below to debug in vscode:
 - .vscode/launch.json // debug config for vscode plugin cortex-debug
 - .vscode/task.json // auto compiling before debugging
 - .vscode/settings.json // telling the path of arm tool chain to cortex-debug plugin for finding gdb bin 
-  
+
+In order to view register better .svd file is needed . Download it from st website then edit in .vscode/launch.json.
+
 Every time configure changed by user in stm32cubeMX, makefile will be regenerated. One thing should be noticed is that the optimizition of gcc compiling in makefile should be -O0 when debuging needed. 
+
+dependencies:  
+- openocd: sudo pacman -S openocd
+- arm-gnu-toolchain: download from arm web site
+- cortext-debug: vscode plugin
+- stm32cubeMX: download from st web site 
+- vscode
