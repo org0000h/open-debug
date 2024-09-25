@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Cortex Debug",
+            "name": "stlink",
             "cwd": "${workspaceFolder}",
             "executable": "${workspaceFolder}/build/f3d.elf",
             "request": "launch",
@@ -15,6 +15,24 @@
             "preLaunchTask": "build",
             "configFiles": [
                 "openocd-stlink.cfg"
+            ],
+            "svdFile": "${workspaceFolder}/STM32F303.svd",
+            "postRestartCommands": [
+                "monitor reset halt",
+                "monitor reset init"
+            ],
+        },
+        {
+            "name": "cmsis-dap",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/f3d.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "stlink",
+            "preLaunchTask": "build",
+            "configFiles": [
+                "openocd-dap.cfg"
             ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [
