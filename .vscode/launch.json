@@ -14,7 +14,8 @@
             "servertype": "stlink",
             "preLaunchTask": "build",
             "configFiles": [
-                "openocd-stlink.cfg"
+                "stlink.cfg",
+                "stm32f3.cfg"
             ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [
@@ -32,7 +33,8 @@
             "servertype": "openocd",
             "preLaunchTask": "build",
             "configFiles": [
-                "openocd-dap.cfg"
+                "daplink.cfg",
+                "stm32f3.cfg"
             ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [
