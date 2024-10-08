@@ -10,13 +10,8 @@
             "executable": "${workspaceFolder}/build/f3d.elf",
             "request": "launch",
             "type": "cortex-debug",
-            "runToEntryPoint": "main",
             "servertype": "stlink",
             "preLaunchTask": "build",
-            "configFiles": [
-                "${workspaceFolder}/openocd/stlink.cfg",
-                "${workspaceFolder}/chipset.cfg"
-            ],
             "svdFile": "${workspaceFolder}/STM32F303.svd",
             "postRestartCommands": [
                 "monitor reset halt",
@@ -24,12 +19,11 @@
             ],
         },
         {
-            "name": "cmsis-dap",
+            "name": "daplink",
             "cwd": "${workspaceFolder}",
             "executable": "${workspaceFolder}/build/f3d.elf",
             "request": "launch",
             "type": "cortex-debug",
-            "runToEntryPoint": "main",
             "servertype": "openocd",
             "preLaunchTask": "build",
             "configFiles": [
@@ -41,6 +35,29 @@
                 "monitor reset halt",
                 "monitor reset init"
             ],
+        },
+        {
+            "name": "jlink",
+            "device": "STM32F303VC",
+            "interface": "swd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/f3d.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "preLaunchTask": "build",
+            "svdFile": "${workspaceFolder}/STM32F303.svd",
+            "postRestartCommands": [
+                "monitor reset halt",
+                "monitor reset init",
+                "monitor rtt start"
+            ],
+            "rttConfig": {
+                "enabled": true, // 启用 RTT
+                "address": "auto",
+                "clearOnRestart": true, // 重启时清除 RTT 缓冲区
+                "polling_interval": 100 // 设置 RTT 轮询间隔，单位为毫秒
+            },
         }
     ]
 }
