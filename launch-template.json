@@ -4,7 +4,7 @@
         {
             "name": "stlink",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/f3d.elf",
+            "executable": "${workspaceFolder}/build/{target}",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stlink",
@@ -18,7 +18,7 @@
         {
             "name": "daplink",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/f3d.elf",
+            "executable": "${workspaceFolder}/build/{target}",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
@@ -35,10 +35,10 @@
         },
         {
             "name": "jlink",
-            "device": "STM32F303VC",
+            "device": "{chipname}",
             "interface": "swd",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/f3d.elf",
+            "executable": "${workspaceFolder}/build/{target}",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "jlink",
